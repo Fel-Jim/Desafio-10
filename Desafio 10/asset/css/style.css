@@ -1,0 +1,159 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 80%;
+    grid-template-areas:
+        "header main"
+        "header footer";
+}
+
+header {
+    display: grid;
+    grid-area: header;
+    background-color: orange;
+    color: black;
+    font-size: 3vh;
+}
+
+.header-logo {
+    display: flex;
+    justify-content: center;
+}
+
+.header-logo img {
+    border-radius: 10vh;
+    border: solid grey 1vh;
+    width: 30vh;
+    margin: 2vh;
+}
+
+.header-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.header-info button {
+    background-color: #F59924;
+    border-radius: 2vh;
+    width: 30vh;
+    height: 5vh;
+    font-size: 3vh;
+}
+
+.info-1 {
+    margin: 2vh;
+}
+
+.info-2 {
+    margin: 2vh;
+}
+
+.info-3 {
+    margin: 2vh;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    grid-area: main;
+    justify-content: center;
+    background-color: #F2F44F;
+}
+
+.img-section {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 2vh;
+    height: 80vh;
+}
+
+.box {
+    flex-direction: column;
+    margin: 1vh;
+}
+
+.img-box img {
+    object-fit: cover;
+    border-radius: 10vh;
+    border: solid #8ED2FF;
+    width: 45vh;
+    height: 33vh;
+    transition: 1s;
+
+}
+
+.img-box img:hover {
+    width: 45vh;
+    height: 39vh;
+}
+
+footer {
+    display: flex;
+    grid-area: footer;
+    background-color: #FF9430;
+    justify-content: center;
+
+}
+
+.social-media {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.media-1 p {
+    margin: 1vh;
+}
+
+.media-2 p {
+    margin: 1vh;
+}
+
+.media-3 p {
+    margin: 1vh;
+}
+
+@media (max-width: 576px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 80%;
+        grid-template-areas:
+            "header "
+            "main "
+            "footer";
+    }
+
+    .header-bar {
+        display: flex;
+
+    }
+
+    .header-info {
+        display: flex;
+        padding-left: 20vh;
+    }
+
+    main {
+        overflow-y: scroll;
+    }
+
+    .img-section {
+        display: grid;
+        grid-template-columns: auto;
+    }
+
+    .img-box img {
+        width: 60vh;
+        height: 52vh;
+        transition: 1s;
+    }
+
+    .img-box img:hover {
+        width: 75vh;
+        height: 60vh;
+    }
+
+
+
+}
